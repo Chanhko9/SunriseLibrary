@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.625, 8.5" name="SunriseData">
+  <DataContextMoniker Name="/SunriseDataDataContext" />
+  <nestedChildShapes>
+    <classShape Id="e2b657ac-7e50-4adf-afd7-1e3528de8aca" absoluteBounds="6.625, 4.25, 2, 1.3862939453125">
+      <DataClassMoniker Name="/SunriseDataDataContext/vai_tro" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f9b85e06-33d5-4662-a4cb-44649ea384b4" absoluteBounds="6.6400000000000006, 4.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0da92d0f-183b-45d3-a971-478a69f7abb9" absoluteBounds="1.5, 3.125, 2, 3.1170068359375">
+      <DataClassMoniker Name="/SunriseDataDataContext/tai_lieu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a611d57e-4a6b-4f4c-902c-cd6a874870a6" absoluteBounds="1.5150000000000001, 3.585, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="633efe29-a1d8-43c7-b581-360850be0f06" absoluteBounds="9.375, 3.625, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/SunriseDataDataContext/tai_khoan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a188992c-db19-479f-9d5f-63e809f1eb0e" absoluteBounds="9.39, 4.085, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.625 : 4.94314697265625); (8.91666666666667 : 4.94314697265625 : JumpStart); (9.08333333333333 : 4.94314697265625 : JumpEnd); (9.375 : 4.94314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SunriseDataDataContext/vai_tro/vai_tro_tai_khoan" />
+      <nodes>
+        <classShapeMoniker Id="e2b657ac-7e50-4adf-afd7-1e3528de8aca" />
+        <classShapeMoniker Id="633efe29-a1d8-43c7-b581-360850be0f06" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3321b772-c912-49e8-a78e-f7dd2bc2fb4d" absoluteBounds="8.625, 0.5, 2, 2.5401025390625">
+      <DataClassMoniker Name="/SunriseDataDataContext/phieu_muon_tra" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ffa64b99-056a-40c8-97dd-20cb26f6843e" absoluteBounds="8.64, 0.96, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b0571b6d-0adc-4f69-beaf-ec8a3dfc9532" absoluteBounds="1.25, 0.625, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/SunriseDataDataContext/phan_loai_tai_lieu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cc68dc56-c68e-4f8b-9426-431e53206d33" absoluteBounds="1.2650000000000001, 1.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.375 : 2.39589680989583); (2.375 : 3.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SunriseDataDataContext/phan_loai_tai_lieu/phan_loai_tai_lieu_tai_lieu" />
+      <nodes>
+        <classShapeMoniker Id="b0571b6d-0adc-4f69-beaf-ec8a3dfc9532" />
+        <classShapeMoniker Id="0da92d0f-183b-45d3-a971-478a69f7abb9" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="9bbf6ae8-c2e4-4818-9df5-b31e063a4ffd" absoluteBounds="4.125, 4.125, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/SunriseDataDataContext/ban_sao_tai_lieu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fecc284e-8712-4e3d-bf76-ec8a1baa0fe2" absoluteBounds="4.14, 4.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.125 : 6.157900390625); (9 : 6.157900390625); (9 : 3.0401025390625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SunriseDataDataContext/ban_sao_tai_lieu/ban_sao_tai_lieu_phieu_muon_tra" />
+      <nodes>
+        <classShapeMoniker Id="9bbf6ae8-c2e4-4818-9df5-b31e063a4ffd" />
+        <classShapeMoniker Id="3321b772-c912-49e8-a78e-f7dd2bc2fb4d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.5 : 5.18350341796875); (4.125 : 5.18350341796875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SunriseDataDataContext/tai_lieu/tai_lieu_ban_sao_tai_lieu" />
+      <nodes>
+        <classShapeMoniker Id="0da92d0f-183b-45d3-a971-478a69f7abb9" />
+        <classShapeMoniker Id="9bbf6ae8-c2e4-4818-9df5-b31e063a4ffd" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c65443d7-f741-4152-a9e0-e4c57a438cdc" absoluteBounds="4.375, 0.5, 2, 3.1170068359375">
+      <DataClassMoniker Name="/SunriseDataDataContext/ban_doc" />
+      <nestedChildShapes>
+        <elementListCompartment Id="09a028be-74c5-45fa-86b0-878e04d1e70f" absoluteBounds="4.39, 0.96, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.375 : 1.77005126953125); (8.625 : 1.77005126953125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SunriseDataDataContext/ban_doc/ban_doc_phieu_muon_tra" />
+      <nodes>
+        <classShapeMoniker Id="c65443d7-f741-4152-a9e0-e4c57a438cdc" />
+        <classShapeMoniker Id="3321b772-c912-49e8-a78e-f7dd2bc2fb4d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.03125 : 3.625); (11.03125 : 3.3598046875); (9.08333333333333 : 3.3598046875 : JumpStart); (8.91666666666667 : 3.3598046875 : JumpEnd); (6.375 : 3.3598046875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SunriseDataDataContext/tai_khoan/tai_khoan_ban_doc" />
+      <nodes>
+        <classShapeMoniker Id="633efe29-a1d8-43c7-b581-360850be0f06" />
+        <classShapeMoniker Id="c65443d7-f741-4152-a9e0-e4c57a438cdc" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

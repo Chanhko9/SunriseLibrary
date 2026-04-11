@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ql_thu_vien_sunrise" Class="SunriseDataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=SANGMH\SQLEXPRESS01;Initial Catalog=ql_thu_vien_sunrise;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="SunriseLibrary.Properties.Settings" SettingsPropertyName="ql_thu_vien_sunriseConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.vai_tro" Member="vai_tros">
+    <Type Name="vai_tro">
+      <Column Name="ma_vai_tro" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ten_vai_tro" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="mo_ta" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="vai_tro_tai_khoan" Member="tai_khoans" ThisKey="ma_vai_tro" OtherKey="ma_vai_tro" Type="tai_khoan" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tai_lieu" Member="tai_lieus">
+    <Type Name="tai_lieu">
+      <Column Name="ma_tai_lieu" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ma_phan_loai" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ma_doc" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="ten_tai_lieu" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="tac_gia" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="nha_xuat_ban" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="nam_xuat_ban" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="loai_tai_lieu" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="mo_ta" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="duong_dan_file" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="quyen_truy_cap" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ngay_nhap" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="tai_lieu_ban_sao_tai_lieu" Member="ban_sao_tai_lieus" ThisKey="ma_tai_lieu" OtherKey="ma_tai_lieu" Type="ban_sao_tai_lieu" />
+      <Association Name="phan_loai_tai_lieu_tai_lieu" Member="phan_loai_tai_lieu" ThisKey="ma_phan_loai" OtherKey="ma_phan_loai" Type="phan_loai_tai_lieu" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tai_khoan" Member="tai_khoans">
+    <Type Name="tai_khoan">
+      <Column Name="ma_tai_khoan" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ma_vai_tro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ten_dang_nhap" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="mat_khau" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="trang_thai" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ngay_tao" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="lan_dang_nhap_cuoi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="tai_khoan_ban_doc" Member="ban_docs" ThisKey="ma_tai_khoan" OtherKey="ma_tai_khoan" Type="ban_doc" />
+      <Association Name="vai_tro_tai_khoan" Member="vai_tro" ThisKey="ma_vai_tro" OtherKey="ma_vai_tro" Type="vai_tro" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.phieu_muon_tra" Member="phieu_muon_tras">
+    <Type Name="phieu_muon_tra">
+      <Column Name="ma_phieu" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ma_ban_doc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ma_ban_sao" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ngay_muon" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="han_tra" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ngay_tra" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="trang_thai_phieu" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="tien_phat" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="ghi_chu" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="ban_sao_tai_lieu_phieu_muon_tra" Member="ban_sao_tai_lieu" ThisKey="ma_ban_sao" OtherKey="ma_ban_sao" Type="ban_sao_tai_lieu" IsForeignKey="true" />
+      <Association Name="ban_doc_phieu_muon_tra" Member="ban_doc" ThisKey="ma_ban_doc" OtherKey="ma_ban_doc" Type="ban_doc" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.phan_loai_tai_lieu" Member="phan_loai_tai_lieus">
+    <Type Name="phan_loai_tai_lieu">
+      <Column Name="ma_phan_loai" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ten_phan_loai" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ky_hieu" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="mo_ta" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="tu_khoa" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="phan_loai_tai_lieu_tai_lieu" Member="tai_lieus" ThisKey="ma_phan_loai" OtherKey="ma_phan_loai" Type="tai_lieu" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ban_sao_tai_lieu" Member="ban_sao_tai_lieus">
+    <Type Name="ban_sao_tai_lieu">
+      <Column Name="ma_ban_sao" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ma_tai_lieu" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ma_vach" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="vi_tri_kho" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="trang_thai" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ngay_nhap_kho" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ghi_chu" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="ban_sao_tai_lieu_phieu_muon_tra" Member="phieu_muon_tras" ThisKey="ma_ban_sao" OtherKey="ma_ban_sao" Type="phieu_muon_tra" />
+      <Association Name="tai_lieu_ban_sao_tai_lieu" Member="tai_lieu" ThisKey="ma_tai_lieu" OtherKey="ma_tai_lieu" Type="tai_lieu" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ban_doc" Member="ban_docs">
+    <Type Name="ban_doc">
+      <Column Name="ma_ban_doc" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ma_tai_khoan" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ma_the" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="ho_ten" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ngay_sinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="gioi_tinh" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="so_dien_thoai" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="dia_chi" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="loai_ban_doc" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ngay_cap_the" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ngay_het_han" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="trang_thai_the" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="ban_doc_phieu_muon_tra" Member="phieu_muon_tras" ThisKey="ma_ban_doc" OtherKey="ma_ban_doc" Type="phieu_muon_tra" />
+      <Association Name="tai_khoan_ban_doc" Member="tai_khoan" ThisKey="ma_tai_khoan" OtherKey="ma_tai_khoan" Type="tai_khoan" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
