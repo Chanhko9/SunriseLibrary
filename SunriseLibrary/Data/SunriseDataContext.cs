@@ -15,6 +15,7 @@ namespace SunriseLibrary.Data
         public Table<VaiTro> VaiTros => GetTable<VaiTro>();
         public Table<TaiKhoan> TaiKhoans => GetTable<TaiKhoan>();
         public Table<BanDoc> BanDocs => GetTable<BanDoc>();
+        public Table<SinhVienChoCapThe> SinhVienChoCapThes => GetTable<SinhVienChoCapThe>();
         public Table<PhanLoaiTaiLieu> PhanLoaiTaiLieus => GetTable<PhanLoaiTaiLieu>();
         public Table<TaiLieu> TaiLieus => GetTable<TaiLieu>();
         public Table<BanSaoTaiLieu> BanSaoTaiLieus => GetTable<BanSaoTaiLieu>();

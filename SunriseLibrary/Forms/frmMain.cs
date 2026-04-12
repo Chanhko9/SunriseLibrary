@@ -48,6 +48,36 @@ namespace SunriseLibrary.Forms
             new frmTraCuuTaiLieu().ShowDialog();
         }
 
+        private void btnMuonTraSach_Click(object sender, EventArgs e)
+        {
+            new frmMuonTraSach().ShowDialog();
+        }
+
+        private void btnCapTheThuVien_Click(object sender, EventArgs e)
+        {
+            new frmCapTheThuVien().ShowDialog();
+        }
+
+        private void btnHoSoBanDoc_Click(object sender, EventArgs e)
+        {
+            new frmHoSoBanDoc().ShowDialog();
+        }
+
+        private void btnTileMuonTra_Click(object sender, EventArgs e)
+        {
+            new frmMuonTraSach().ShowDialog();
+        }
+
+        private void btnTileCapThe_Click(object sender, EventArgs e)
+        {
+            new frmCapTheThuVien().ShowDialog();
+        }
+
+        private void btnTileHoSo_Click(object sender, EventArgs e)
+        {
+            new frmHoSoBanDoc().ShowDialog();
+        }
+
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
             UserSession.Clear();
