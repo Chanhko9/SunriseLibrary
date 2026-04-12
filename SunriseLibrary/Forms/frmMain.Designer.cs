@@ -116,7 +116,7 @@ namespace SunriseLibrary.Forms
             this.btnHoSoBanDoc.TabIndex = 4;
             this.btnHoSoBanDoc.Text = "Hồ sơ bạn đọc";
             this.btnHoSoBanDoc.UseVisualStyleBackColor = true;
-            this.btnHoSoBanDoc.Click += new System.EventHandler(this.ChuaTrienKhai);
+            this.btnHoSoBanDoc.Click += new System.EventHandler(this.btnHoSoBanDoc_Click);
             // 
             // btnCapTheThuVien
             // 
@@ -126,7 +126,7 @@ namespace SunriseLibrary.Forms
             this.btnCapTheThuVien.TabIndex = 3;
             this.btnCapTheThuVien.Text = "Cấp thẻ thư viện";
             this.btnCapTheThuVien.UseVisualStyleBackColor = true;
-            this.btnCapTheThuVien.Click += new System.EventHandler(this.ChuaTrienKhai);
+            this.btnCapTheThuVien.Click += new System.EventHandler(this.btnCapTheThuVien_Click);
             // 
             // btnMuonTraSach
             // 
@@ -136,7 +136,7 @@ namespace SunriseLibrary.Forms
             this.btnMuonTraSach.TabIndex = 2;
             this.btnMuonTraSach.Text = "Mượn / Trả sách";
             this.btnMuonTraSach.UseVisualStyleBackColor = true;
-            this.btnMuonTraSach.Click += new System.EventHandler(this.ChuaTrienKhai);
+            this.btnMuonTraSach.Click += new System.EventHandler(this.btnMuonTraSach_Click);
             // 
             // btnTraCuuTaiLieu
             // 
@@ -233,7 +233,7 @@ namespace SunriseLibrary.Forms
             this.btnTileHoSo.TabIndex = 3;
             this.btnTileHoSo.Text = "Hồ sơ";
             this.btnTileHoSo.UseVisualStyleBackColor = true;
-            this.btnTileHoSo.Click += new System.EventHandler(this.ChuaTrienKhai);
+            this.btnTileHoSo.Click += new System.EventHandler(this.btnTileHoSo_Click);
             // 
             // btnTileCapThe
             // 
@@ -243,7 +243,7 @@ namespace SunriseLibrary.Forms
             this.btnTileCapThe.TabIndex = 2;
             this.btnTileCapThe.Text = "Cấp thẻ";
             this.btnTileCapThe.UseVisualStyleBackColor = true;
-            this.btnTileCapThe.Click += new System.EventHandler(this.ChuaTrienKhai);
+            this.btnTileCapThe.Click += new System.EventHandler(this.btnTileCapThe_Click);
             // 
             // btnTileMuonTra
             // 
@@ -253,7 +253,7 @@ namespace SunriseLibrary.Forms
             this.btnTileMuonTra.TabIndex = 1;
             this.btnTileMuonTra.Text = "Mượn/Trả";
             this.btnTileMuonTra.UseVisualStyleBackColor = true;
-            this.btnTileMuonTra.Click += new System.EventHandler(this.ChuaTrienKhai);
+            this.btnTileMuonTra.Click += new System.EventHandler(this.btnTileMuonTra_Click);
             // 
             // btnTileTraCuu
             // 

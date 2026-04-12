@@ -41,5 +41,14 @@ namespace SunriseLibrary.Models
 
         [Column]
         public string trang_thai_the { get; set; }
+
+        [Column(CanBeNull = true)]
+        public string mssv { get; set; }
+
+        [Column(CanBeNull = true)]
+        public string khoa { get; set; }
+
+        [Column(CanBeNull = true)]
+        public string lop { get; set; }
     }
 }
