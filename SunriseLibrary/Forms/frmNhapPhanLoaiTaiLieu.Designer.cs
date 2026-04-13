@@ -240,7 +240,7 @@ namespace SunriseLibrary.Forms
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(329, 319);
+            this.btnHuy.Location = new System.Drawing.Point(359, 319);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(97, 47);
@@ -254,7 +254,7 @@ namespace SunriseLibrary.Forms
             this.btnNhapMoi.Location = new System.Drawing.Point(215, 319);
             this.btnNhapMoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNhapMoi.Name = "btnNhapMoi";
-            this.btnNhapMoi.Size = new System.Drawing.Size(97, 47);
+            this.btnNhapMoi.Size = new System.Drawing.Size(125, 47);
             this.btnNhapMoi.TabIndex = 17;
             this.btnNhapMoi.Text = "Nhập mới";
             this.btnNhapMoi.UseVisualStyleBackColor = true;
@@ -415,7 +415,7 @@ namespace SunriseLibrary.Forms
             this.btnChonTep.Location = new System.Drawing.Point(10, 95);
             this.btnChonTep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnChonTep.Name = "btnChonTep";
-            this.btnChonTep.Size = new System.Drawing.Size(126, 35);
+            this.btnChonTep.Size = new System.Drawing.Size(127, 35);
             this.btnChonTep.TabIndex = 1;
             this.btnChonTep.Text = "Chọn tệp";
             this.btnChonTep.UseVisualStyleBackColor = true;
@@ -434,7 +434,7 @@ namespace SunriseLibrary.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1432, 741);
+            this.ClientSize = new System.Drawing.Size(1140, 526);
             this.Controls.Add(this.grpTepTin);
             this.Controls.Add(this.grpPhanLoai);
             this.Controls.Add(this.grpThongTinTaiLieu);

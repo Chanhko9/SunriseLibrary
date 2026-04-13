@@ -17,6 +17,7 @@ IF OBJECT_ID(N'dbo.phieu_muon_tra', N'U') IS NOT NULL DROP TABLE dbo.phieu_muon_
 IF OBJECT_ID(N'dbo.ban_sao_tai_lieu', N'U') IS NOT NULL DROP TABLE dbo.ban_sao_tai_lieu;
 IF OBJECT_ID(N'dbo.tai_lieu', N'U') IS NOT NULL DROP TABLE dbo.tai_lieu;
 IF OBJECT_ID(N'dbo.phan_loai_tai_lieu', N'U') IS NOT NULL DROP TABLE dbo.phan_loai_tai_lieu;
+IF OBJECT_ID(N'dbo.sinh_vien_cho_cap_the', N'U') IS NOT NULL DROP TABLE dbo.sinh_vien_cho_cap_the;
 IF OBJECT_ID(N'dbo.ban_doc', N'U') IS NOT NULL DROP TABLE dbo.ban_doc;
 IF OBJECT_ID(N'dbo.tai_khoan', N'U') IS NOT NULL DROP TABLE dbo.tai_khoan;
 IF OBJECT_ID(N'dbo.vai_tro', N'U') IS NOT NULL DROP TABLE dbo.vai_tro;
@@ -56,8 +57,27 @@ CREATE TABLE dbo.ban_doc (
     ngay_cap_the DATE NULL,
     ngay_het_han DATE NULL,
     trang_thai_the NVARCHAR(20) NOT NULL DEFAULT N'HoatDong',
+    mssv NVARCHAR(20) NULL,
+    khoa NVARCHAR(100) NULL,
+    lop NVARCHAR(50) NULL,
     CONSTRAINT FK_ban_doc_tai_khoan FOREIGN KEY (ma_tai_khoan)
         REFERENCES dbo.tai_khoan(ma_tai_khoan)
+);
+GO
+
+CREATE TABLE dbo.sinh_vien_cho_cap_the (
+    ma_sinh_vien_cho INT IDENTITY(1,1) PRIMARY KEY,
+    mssv NVARCHAR(20) NOT NULL UNIQUE,
+    ho_ten NVARCHAR(100) NOT NULL,
+    khoa NVARCHAR(100) NULL,
+    lop NVARCHAR(50) NULL,
+    ngay_sinh DATE NULL,
+    email NVARCHAR(100) NULL,
+    so_dien_thoai NVARCHAR(15) NULL,
+    trang_thai_dong_bo NVARCHAR(20) NOT NULL DEFAULT N'ChuaNhan',
+    da_cap_the BIT NOT NULL DEFAULT 0,
+    ngay_tao DATETIME NOT NULL DEFAULT GETDATE(),
+    ngay_cap_nhat DATETIME NULL
 );
 GO
 
@@ -160,6 +180,7 @@ CREATE TABLE dbo.chi_tiet_kiem_ke (
 GO
 
 CREATE INDEX IX_tai_khoan_ma_vai_tro ON dbo.tai_khoan(ma_vai_tro);
+CREATE INDEX IX_ban_doc_mssv ON dbo.ban_doc(mssv);
 CREATE INDEX IX_tai_lieu_ma_phan_loai ON dbo.tai_lieu(ma_phan_loai);
 CREATE INDEX IX_tai_lieu_ten ON dbo.tai_lieu(ten_tai_lieu);
 CREATE INDEX IX_tai_lieu_tac_gia ON dbo.tai_lieu(tac_gia);

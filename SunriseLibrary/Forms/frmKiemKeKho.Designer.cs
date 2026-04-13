@@ -79,7 +79,7 @@ namespace SunriseLibrary.Forms
             this.btnTaoDot.Location = new System.Drawing.Point(786, 30);
             this.btnTaoDot.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTaoDot.Name = "btnTaoDot";
-            this.btnTaoDot.Size = new System.Drawing.Size(115, 50);
+            this.btnTaoDot.Size = new System.Drawing.Size(126, 50);
             this.btnTaoDot.TabIndex = 8;
             this.btnTaoDot.Text = "Tạo đợt";
             this.btnTaoDot.UseVisualStyleBackColor = true;
@@ -278,10 +278,10 @@ namespace SunriseLibrary.Forms
             // 
             // btnNhapKetQua
             // 
-            this.btnNhapKetQua.Location = new System.Drawing.Point(26, 257);
+            this.btnNhapKetQua.Location = new System.Drawing.Point(6, 257);
             this.btnNhapKetQua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNhapKetQua.Name = "btnNhapKetQua";
-            this.btnNhapKetQua.Size = new System.Drawing.Size(134, 43);
+            this.btnNhapKetQua.Size = new System.Drawing.Size(163, 43);
             this.btnNhapKetQua.TabIndex = 10;
             this.btnNhapKetQua.Text = "Nhập kết quả";
             this.btnNhapKetQua.UseVisualStyleBackColor = true;
@@ -387,7 +387,7 @@ namespace SunriseLibrary.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1355, 726);
+            this.ClientSize = new System.Drawing.Size(1164, 570);
             this.Controls.Add(this.grpTongHop);
             this.Controls.Add(this.grpDanhSach);
             this.Controls.Add(this.grpDotKiemKe);

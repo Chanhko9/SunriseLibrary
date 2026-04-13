@@ -93,7 +93,7 @@ namespace SunriseLibrary.Forms
             // 
             this.btnXemBaoCao.Location = new System.Drawing.Point(721, 41);
             this.btnXemBaoCao.Name = "btnXemBaoCao";
-            this.btnXemBaoCao.Size = new System.Drawing.Size(101, 35);
+            this.btnXemBaoCao.Size = new System.Drawing.Size(104, 35);
             this.btnXemBaoCao.TabIndex = 6;
             this.btnXemBaoCao.Text = "Xem";
             this.btnXemBaoCao.UseVisualStyleBackColor = true;

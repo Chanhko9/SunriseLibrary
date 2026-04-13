@@ -48,7 +48,7 @@ namespace SunriseLibrary.Forms
             // 
             this.btnLamMoi.Location = new System.Drawing.Point(589, 505);
             this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(122, 40);
+            this.btnLamMoi.Size = new System.Drawing.Size(129, 40);
             this.btnLamMoi.TabIndex = 6;
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.UseVisualStyleBackColor = true;
@@ -58,7 +58,7 @@ namespace SunriseLibrary.Forms
             // 
             this.btnLuuQuyen.Location = new System.Drawing.Point(436, 505);
             this.btnLuuQuyen.Name = "btnLuuQuyen";
-            this.btnLuuQuyen.Size = new System.Drawing.Size(122, 40);
+            this.btnLuuQuyen.Size = new System.Drawing.Size(135, 40);
             this.btnLuuQuyen.TabIndex = 5;
             this.btnLuuQuyen.Text = "Lưu quyền";
             this.btnLuuQuyen.UseVisualStyleBackColor = true;
@@ -70,7 +70,7 @@ namespace SunriseLibrary.Forms
             this.chkXemBaoCao.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.chkXemBaoCao.Location = new System.Drawing.Point(36, 479);
             this.chkXemBaoCao.Name = "chkXemBaoCao";
-            this.chkXemBaoCao.Size = new System.Drawing.Size(156, 31);
+            this.chkXemBaoCao.Size = new System.Drawing.Size(165, 31);
             this.chkXemBaoCao.TabIndex = 4;
             this.chkXemBaoCao.Text = "Xem báo cáo";
             this.chkXemBaoCao.UseVisualStyleBackColor = true;
@@ -81,7 +81,7 @@ namespace SunriseLibrary.Forms
             this.chkQuanLyTaiKhoan.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.chkQuanLyTaiKhoan.Location = new System.Drawing.Point(36, 442);
             this.chkQuanLyTaiKhoan.Name = "chkQuanLyTaiKhoan";
-            this.chkQuanLyTaiKhoan.Size = new System.Drawing.Size(197, 31);
+            this.chkQuanLyTaiKhoan.Size = new System.Drawing.Size(209, 31);
             this.chkQuanLyTaiKhoan.TabIndex = 3;
             this.chkQuanLyTaiKhoan.Text = "Quản lý tài khoản";
             this.chkQuanLyTaiKhoan.UseVisualStyleBackColor = true;
@@ -92,7 +92,7 @@ namespace SunriseLibrary.Forms
             this.chkThemSuaXoa.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.chkThemSuaXoa.Location = new System.Drawing.Point(36, 405);
             this.chkThemSuaXoa.Name = "chkThemSuaXoa";
-            this.chkThemSuaXoa.Size = new System.Drawing.Size(181, 31);
+            this.chkThemSuaXoa.Size = new System.Drawing.Size(199, 31);
             this.chkThemSuaXoa.TabIndex = 2;
             this.chkThemSuaXoa.Text = "Thêm / sửa / xóa";
             this.chkThemSuaXoa.UseVisualStyleBackColor = true;
@@ -103,7 +103,7 @@ namespace SunriseLibrary.Forms
             this.chkXemDuLieu.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.chkXemDuLieu.Location = new System.Drawing.Point(36, 368);
             this.chkXemDuLieu.Name = "chkXemDuLieu";
-            this.chkXemDuLieu.Size = new System.Drawing.Size(151, 31);
+            this.chkXemDuLieu.Size = new System.Drawing.Size(156, 31);
             this.chkXemDuLieu.TabIndex = 1;
             this.chkXemDuLieu.Text = "Xem dữ liệu";
             this.chkXemDuLieu.UseVisualStyleBackColor = true;
@@ -123,7 +123,7 @@ namespace SunriseLibrary.Forms
             this.dgvTaiKhoan.RowHeadersWidth = 62;
             this.dgvTaiKhoan.RowTemplate.Height = 28;
             this.dgvTaiKhoan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTaiKhoan.Size = new System.Drawing.Size(833, 303);
+            this.dgvTaiKhoan.Size = new System.Drawing.Size(843, 303);
             this.dgvTaiKhoan.TabIndex = 0;
             // 
             // colUser
@@ -169,6 +169,7 @@ namespace SunriseLibrary.Forms
             this.grpQuanLyQuyen.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaiKhoan)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         private System.Windows.Forms.GroupBox grpQuanLyQuyen;

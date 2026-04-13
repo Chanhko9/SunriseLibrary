@@ -21,18 +21,31 @@ namespace SunriseLibrary.Forms
 
         private void GanSuKienMoForm()
         {
+            btnMuonTraSach.Click -= ChuaTrienKhai;
+            btnCapTheThuVien.Click -= ChuaTrienKhai;
+            btnHoSoBanDoc.Click -= ChuaTrienKhai;
             btnNhapPhanLoai.Click -= ChuaTrienKhai;
             btnKiemKeKho.Click -= ChuaTrienKhai;
             btnBaoCaoThongKe.Click -= ChuaTrienKhai;
             btnQuanTriHeThong.Click -= ChuaTrienKhai;
+
+            btnTileMuonTra.Click -= ChuaTrienKhai;
+            btnTileCapThe.Click -= ChuaTrienKhai;
+            btnTileHoSo.Click -= ChuaTrienKhai;
             btnTileNhapSach.Click -= ChuaTrienKhai;
             btnTileKiemKe.Click -= ChuaTrienKhai;
 
+            btnMuonTraSach.Click += btnMuonTraSach_Click;
+            btnCapTheThuVien.Click += btnCapTheThuVien_Click;
+            btnHoSoBanDoc.Click += btnHoSoBanDoc_Click;
             btnNhapPhanLoai.Click += btnNhapPhanLoai_Click;
             btnKiemKeKho.Click += btnKiemKeKho_Click;
             btnBaoCaoThongKe.Click += btnBaoCaoThongKe_Click;
             btnQuanTriHeThong.Click += btnQuanTriHeThong_Click;
 
+            btnTileMuonTra.Click += btnTileMuonTra_Click;
+            btnTileCapThe.Click += btnTileCapThe_Click;
+            btnTileHoSo.Click += btnTileHoSo_Click;
             btnTileNhapSach.Click += btnNhapPhanLoai_Click;
             btnTileKiemKe.Click += btnKiemKeKho_Click;
         }
@@ -71,6 +84,36 @@ namespace SunriseLibrary.Forms
         private void btnTileTraCuu_Click(object sender, EventArgs e)
         {
             new frmTraCuuTaiLieu().ShowDialog();
+        }
+
+        private void btnMuonTraSach_Click(object sender, EventArgs e)
+        {
+            new frmMuonTraSach().ShowDialog();
+        }
+
+        private void btnCapTheThuVien_Click(object sender, EventArgs e)
+        {
+            new frmCapTheThuVien().ShowDialog();
+        }
+
+        private void btnHoSoBanDoc_Click(object sender, EventArgs e)
+        {
+            new frmHoSoBanDoc().ShowDialog();
+        }
+
+        private void btnTileMuonTra_Click(object sender, EventArgs e)
+        {
+            new frmMuonTraSach().ShowDialog();
+        }
+
+        private void btnTileCapThe_Click(object sender, EventArgs e)
+        {
+            new frmCapTheThuVien().ShowDialog();
+        }
+
+        private void btnTileHoSo_Click(object sender, EventArgs e)
+        {
+            new frmHoSoBanDoc().ShowDialog();
         }
 
         private void btnNhapPhanLoai_Click(object sender, EventArgs e)
