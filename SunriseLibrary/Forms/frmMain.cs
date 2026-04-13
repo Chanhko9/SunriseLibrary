@@ -9,6 +9,7 @@ namespace SunriseLibrary.Forms
         public frmMain()
         {
             InitializeComponent();
+            GanSuKienMoForm();
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -18,24 +19,48 @@ namespace SunriseLibrary.Forms
             PhanQuyenGiaoDien();
         }
 
+        private void GanSuKienMoForm()
+        {
+            btnNhapPhanLoai.Click -= ChuaTrienKhai;
+            btnKiemKeKho.Click -= ChuaTrienKhai;
+            btnBaoCaoThongKe.Click -= ChuaTrienKhai;
+            btnQuanTriHeThong.Click -= ChuaTrienKhai;
+            btnTileNhapSach.Click -= ChuaTrienKhai;
+            btnTileKiemKe.Click -= ChuaTrienKhai;
+
+            btnNhapPhanLoai.Click += btnNhapPhanLoai_Click;
+            btnKiemKeKho.Click += btnKiemKeKho_Click;
+            btnBaoCaoThongKe.Click += btnBaoCaoThongKe_Click;
+            btnQuanTriHeThong.Click += btnQuanTriHeThong_Click;
+
+            btnTileNhapSach.Click += btnNhapPhanLoai_Click;
+            btnTileKiemKe.Click += btnKiemKeKho_Click;
+        }
+
         private void PhanQuyenGiaoDien()
         {
-            string vaiTro = UserSession.TenVaiTro;
+            bool xemDuLieu = UserSession.XemDuLieu;
+            bool themSuaXoa = UserSession.ThemSuaXoa;
+            bool quanLyTaiKhoan = UserSession.QuanLyTaiKhoan;
+            bool xemBaoCao = UserSession.XemBaoCao;
 
-            if (vaiTro == "BanDoc")
-            {
-                btnMuonTraSach.Visible = false;
-                btnCapTheThuVien.Visible = false;
-                btnHoSoBanDoc.Visible = false;
-                btnNhapPhanLoai.Visible = false;
-                btnKiemKeKho.Visible = false;
-                btnBaoCaoThongKe.Visible = false;
-                btnQuanTriHeThong.Visible = false;
-            }
-            else if (vaiTro == "NhanVien")
-            {
-                btnQuanTriHeThong.Visible = false;
-            }
+            btnTraCuuTaiLieu.Visible = xemDuLieu;
+            btnTileTraCuu.Visible = xemDuLieu;
+
+            btnMuonTraSach.Visible = themSuaXoa;
+            btnCapTheThuVien.Visible = themSuaXoa;
+            btnHoSoBanDoc.Visible = themSuaXoa;
+            btnNhapPhanLoai.Visible = themSuaXoa;
+            btnKiemKeKho.Visible = themSuaXoa;
+
+            btnTileMuonTra.Visible = themSuaXoa;
+            btnTileCapThe.Visible = themSuaXoa;
+            btnTileHoSo.Visible = themSuaXoa;
+            btnTileNhapSach.Visible = themSuaXoa;
+            btnTileKiemKe.Visible = themSuaXoa;
+
+            btnBaoCaoThongKe.Visible = xemBaoCao;
+            btnQuanTriHeThong.Visible = quanLyTaiKhoan;
         }
 
         private void btnTraCuuTaiLieu_Click(object sender, EventArgs e)
@@ -46,6 +71,26 @@ namespace SunriseLibrary.Forms
         private void btnTileTraCuu_Click(object sender, EventArgs e)
         {
             new frmTraCuuTaiLieu().ShowDialog();
+        }
+
+        private void btnNhapPhanLoai_Click(object sender, EventArgs e)
+        {
+            new frmNhapPhanLoaiTaiLieu().ShowDialog();
+        }
+
+        private void btnKiemKeKho_Click(object sender, EventArgs e)
+        {
+            new frmKiemKeKho().ShowDialog();
+        }
+
+        private void btnBaoCaoThongKe_Click(object sender, EventArgs e)
+        {
+            new frmBaoCaoThongKe().ShowDialog();
+        }
+
+        private void btnQuanTriHeThong_Click(object sender, EventArgs e)
+        {
+            new frmQuanTriHeThong().ShowDialog();
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)
@@ -63,7 +108,6 @@ namespace SunriseLibrary.Forms
 
         private void pnlTop_Paint(object sender, PaintEventArgs e)
         {
-
         }
     }
 }

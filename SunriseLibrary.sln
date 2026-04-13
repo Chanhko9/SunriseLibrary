@@ -1,5 +1,5 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
+# SQL Server Management Studio Version 21
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SunriseLibrary", "SunriseLibrary\SunriseLibrary.csproj", "{A1C3D6F0-7D78-4C20-8E7D-6E04B5C91C2B}"
@@ -7,15 +7,23 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Default|Any CPU = Default|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{A1C3D6F0-7D78-4C20-8E7D-6E04B5C91C2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A1C3D6F0-7D78-4C20-8E7D-6E04B5C91C2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1C3D6F0-7D78-4C20-8E7D-6E04B5C91C2B}.Default|Any CPU.ActiveCfg = Release|Any CPU
 		{A1C3D6F0-7D78-4C20-8E7D-6E04B5C91C2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1C3D6F0-7D78-4C20-8E7D-6E04B5C91C2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D99EAAF1-A769-44DA-9C01-4BDF460FC8B6}.Debug|Any CPU.ActiveCfg = Default
+		{D99EAAF1-A769-44DA-9C01-4BDF460FC8B6}.Default|Any CPU.ActiveCfg = Default
+		{D99EAAF1-A769-44DA-9C01-4BDF460FC8B6}.Release|Any CPU.ActiveCfg = Default
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0DDD9070-58DB-41CC-89FD-4DDBDFF4487B}
 	EndGlobalSection
 EndGlobal

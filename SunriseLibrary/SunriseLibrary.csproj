@@ -12,5 +12,6 @@
   <ItemGroup>
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
   </ItemGroup>
 </Project>

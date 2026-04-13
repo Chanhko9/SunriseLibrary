@@ -31,6 +31,12 @@ namespace SunriseLibrary.Models
         public string loai_tai_lieu { get; set; }
 
         [Column(CanBeNull = true)]
+        public string the_loai { get; set; }
+
+        [Column(CanBeNull = true)]
+        public string dinh_dang { get; set; }
+
+        [Column(CanBeNull = true)]
         public string mo_ta { get; set; }
 
         [Column(CanBeNull = true)]
@@ -41,5 +47,8 @@ namespace SunriseLibrary.Models
 
         [Column(CanBeNull = true)]
         public DateTime? ngay_nhap { get; set; }
+
+        [Column]
+        public bool hien_thi_tra_cuu { get; set; }
     }
 }
