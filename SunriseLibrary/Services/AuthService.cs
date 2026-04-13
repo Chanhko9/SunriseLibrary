@@ -44,10 +44,21 @@ namespace SunriseLibrary.Services
                     db.SubmitChanges();
                 }
 
+                var pq = db.PhanQuyenTaiKhoans.FirstOrDefault(x => x.ma_tai_khoan == taiKhoan.ma_tai_khoan);
+
+                bool macDinhXemDuLieu = true;
+                bool macDinhThemSuaXoa = taiKhoan.TenVaiTro == "NhanVien" || taiKhoan.TenVaiTro == "QuanTriVien";
+                bool macDinhQuanLyTaiKhoan = taiKhoan.TenVaiTro == "QuanTriVien";
+                bool macDinhXemBaoCao = taiKhoan.TenVaiTro == "NhanVien" || taiKhoan.TenVaiTro == "QuanTriVien";
+
                 UserSession.MaTaiKhoan = taiKhoan.ma_tai_khoan;
                 UserSession.TenDangNhap = taiKhoan.ten_dang_nhap;
                 UserSession.TenVaiTro = taiKhoan.TenVaiTro;
                 UserSession.DaDangNhap = true;
+                UserSession.XemDuLieu = pq != null ? pq.xem_du_lieu : macDinhXemDuLieu;
+                UserSession.ThemSuaXoa = pq != null ? pq.them_sua_xoa : macDinhThemSuaXoa;
+                UserSession.QuanLyTaiKhoan = pq != null ? pq.quan_ly_tai_khoan : macDinhQuanLyTaiKhoan;
+                UserSession.XemBaoCao = pq != null ? pq.xem_bao_cao : macDinhXemBaoCao;
 
                 return true;
             }

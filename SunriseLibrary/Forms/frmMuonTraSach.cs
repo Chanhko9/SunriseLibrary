@@ -163,5 +163,10 @@ namespace SunriseLibrary.Forms
             dgvSachDangMuon.DataSource = null;
             dgvTrangThaiSach.DataSource = null;
         }
+
+        private void lblHoTen_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

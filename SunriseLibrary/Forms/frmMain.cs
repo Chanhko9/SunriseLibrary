@@ -9,6 +9,7 @@ namespace SunriseLibrary.Forms
         public frmMain()
         {
             InitializeComponent();
+            GanSuKienMoForm();
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -18,24 +19,61 @@ namespace SunriseLibrary.Forms
             PhanQuyenGiaoDien();
         }
 
+        private void GanSuKienMoForm()
+        {
+            btnMuonTraSach.Click -= ChuaTrienKhai;
+            btnCapTheThuVien.Click -= ChuaTrienKhai;
+            btnHoSoBanDoc.Click -= ChuaTrienKhai;
+            btnNhapPhanLoai.Click -= ChuaTrienKhai;
+            btnKiemKeKho.Click -= ChuaTrienKhai;
+            btnBaoCaoThongKe.Click -= ChuaTrienKhai;
+            btnQuanTriHeThong.Click -= ChuaTrienKhai;
+
+            btnTileMuonTra.Click -= ChuaTrienKhai;
+            btnTileCapThe.Click -= ChuaTrienKhai;
+            btnTileHoSo.Click -= ChuaTrienKhai;
+            btnTileNhapSach.Click -= ChuaTrienKhai;
+            btnTileKiemKe.Click -= ChuaTrienKhai;
+
+            btnMuonTraSach.Click += btnMuonTraSach_Click;
+            btnCapTheThuVien.Click += btnCapTheThuVien_Click;
+            btnHoSoBanDoc.Click += btnHoSoBanDoc_Click;
+            btnNhapPhanLoai.Click += btnNhapPhanLoai_Click;
+            btnKiemKeKho.Click += btnKiemKeKho_Click;
+            btnBaoCaoThongKe.Click += btnBaoCaoThongKe_Click;
+            btnQuanTriHeThong.Click += btnQuanTriHeThong_Click;
+
+            btnTileMuonTra.Click += btnTileMuonTra_Click;
+            btnTileCapThe.Click += btnTileCapThe_Click;
+            btnTileHoSo.Click += btnTileHoSo_Click;
+            btnTileNhapSach.Click += btnNhapPhanLoai_Click;
+            btnTileKiemKe.Click += btnKiemKeKho_Click;
+        }
+
         private void PhanQuyenGiaoDien()
         {
-            string vaiTro = UserSession.TenVaiTro;
+            bool xemDuLieu = UserSession.XemDuLieu;
+            bool themSuaXoa = UserSession.ThemSuaXoa;
+            bool quanLyTaiKhoan = UserSession.QuanLyTaiKhoan;
+            bool xemBaoCao = UserSession.XemBaoCao;
 
-            if (vaiTro == "BanDoc")
-            {
-                btnMuonTraSach.Visible = false;
-                btnCapTheThuVien.Visible = false;
-                btnHoSoBanDoc.Visible = false;
-                btnNhapPhanLoai.Visible = false;
-                btnKiemKeKho.Visible = false;
-                btnBaoCaoThongKe.Visible = false;
-                btnQuanTriHeThong.Visible = false;
-            }
-            else if (vaiTro == "NhanVien")
-            {
-                btnQuanTriHeThong.Visible = false;
-            }
+            btnTraCuuTaiLieu.Visible = xemDuLieu;
+            btnTileTraCuu.Visible = xemDuLieu;
+
+            btnMuonTraSach.Visible = themSuaXoa;
+            btnCapTheThuVien.Visible = themSuaXoa;
+            btnHoSoBanDoc.Visible = themSuaXoa;
+            btnNhapPhanLoai.Visible = themSuaXoa;
+            btnKiemKeKho.Visible = themSuaXoa;
+
+            btnTileMuonTra.Visible = themSuaXoa;
+            btnTileCapThe.Visible = themSuaXoa;
+            btnTileHoSo.Visible = themSuaXoa;
+            btnTileNhapSach.Visible = themSuaXoa;
+            btnTileKiemKe.Visible = themSuaXoa;
+
+            btnBaoCaoThongKe.Visible = xemBaoCao;
+            btnQuanTriHeThong.Visible = quanLyTaiKhoan;
         }
 
         private void btnTraCuuTaiLieu_Click(object sender, EventArgs e)
@@ -78,6 +116,26 @@ namespace SunriseLibrary.Forms
             new frmHoSoBanDoc().ShowDialog();
         }
 
+        private void btnNhapPhanLoai_Click(object sender, EventArgs e)
+        {
+            new frmNhapPhanLoaiTaiLieu().ShowDialog();
+        }
+
+        private void btnKiemKeKho_Click(object sender, EventArgs e)
+        {
+            new frmKiemKeKho().ShowDialog();
+        }
+
+        private void btnBaoCaoThongKe_Click(object sender, EventArgs e)
+        {
+            new frmBaoCaoThongKe().ShowDialog();
+        }
+
+        private void btnQuanTriHeThong_Click(object sender, EventArgs e)
+        {
+            new frmQuanTriHeThong().ShowDialog();
+        }
+
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
             UserSession.Clear();
@@ -93,7 +151,6 @@ namespace SunriseLibrary.Forms
 
         private void pnlTop_Paint(object sender, PaintEventArgs e)
         {
-
         }
     }
 }

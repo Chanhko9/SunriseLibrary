@@ -427,5 +427,10 @@ namespace SunriseLibrary.Forms
 
             return null;
         }
+
+        private void txtMaThe_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

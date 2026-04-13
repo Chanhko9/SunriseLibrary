@@ -1,3 +1,6 @@
+USE master;
+GO
+
 IF DB_ID(N'ql_thu_vien_sunrise') IS NULL
 BEGIN
     CREATE DATABASE ql_thu_vien_sunrise;
@@ -7,6 +10,9 @@ GO
 USE ql_thu_vien_sunrise;
 GO
 
+IF OBJECT_ID(N'dbo.chi_tiet_kiem_ke', N'U') IS NOT NULL DROP TABLE dbo.chi_tiet_kiem_ke;
+IF OBJECT_ID(N'dbo.dot_kiem_ke', N'U') IS NOT NULL DROP TABLE dbo.dot_kiem_ke;
+IF OBJECT_ID(N'dbo.phan_quyen_tai_khoan', N'U') IS NOT NULL DROP TABLE dbo.phan_quyen_tai_khoan;
 IF OBJECT_ID(N'dbo.phieu_muon_tra', N'U') IS NOT NULL DROP TABLE dbo.phieu_muon_tra;
 IF OBJECT_ID(N'dbo.ban_sao_tai_lieu', N'U') IS NOT NULL DROP TABLE dbo.ban_sao_tai_lieu;
 IF OBJECT_ID(N'dbo.tai_lieu', N'U') IS NOT NULL DROP TABLE dbo.tai_lieu;
@@ -93,10 +99,13 @@ CREATE TABLE dbo.tai_lieu (
     nha_xuat_ban NVARCHAR(200) NULL,
     nam_xuat_ban INT NULL,
     loai_tai_lieu NVARCHAR(50) NOT NULL,
+    the_loai NVARCHAR(100) NULL,
+    dinh_dang NVARCHAR(50) NULL,
     mo_ta NVARCHAR(255) NULL,
     duong_dan_file NVARCHAR(255) NULL,
     quyen_truy_cap NVARCHAR(20) NOT NULL DEFAULT N'CongKhai',
     ngay_nhap DATE NULL,
+    hien_thi_tra_cuu BIT NOT NULL DEFAULT 1,
     CONSTRAINT FK_tai_lieu_phan_loai FOREIGN KEY (ma_phan_loai)
         REFERENCES dbo.phan_loai_tai_lieu(ma_phan_loai)
 );
@@ -132,6 +141,44 @@ CREATE TABLE dbo.phieu_muon_tra (
 );
 GO
 
+CREATE TABLE dbo.phan_quyen_tai_khoan (
+    ma_phan_quyen INT IDENTITY(1,1) PRIMARY KEY,
+    ma_tai_khoan INT NOT NULL UNIQUE,
+    xem_du_lieu BIT NOT NULL DEFAULT 1,
+    them_sua_xoa BIT NOT NULL DEFAULT 0,
+    quan_ly_tai_khoan BIT NOT NULL DEFAULT 0,
+    xem_bao_cao BIT NOT NULL DEFAULT 0,
+    CONSTRAINT FK_phan_quyen_tai_khoan FOREIGN KEY (ma_tai_khoan)
+        REFERENCES dbo.tai_khoan(ma_tai_khoan)
+);
+GO
+
+CREATE TABLE dbo.dot_kiem_ke (
+    ma_dot_kiem_ke INT IDENTITY(1,1) PRIMARY KEY,
+    ma_dot NVARCHAR(30) NOT NULL UNIQUE,
+    kho NVARCHAR(100) NULL,
+    ngay_bat_dau DATETIME NOT NULL DEFAULT GETDATE(),
+    nguoi_phu_trach NVARCHAR(100) NULL,
+    trang_thai NVARCHAR(20) NOT NULL DEFAULT N'DangMo',
+    ngay_ket_thuc DATETIME NULL
+);
+GO
+
+CREATE TABLE dbo.chi_tiet_kiem_ke (
+    ma_chi_tiet INT IDENTITY(1,1) PRIMARY KEY,
+    ma_dot_kiem_ke INT NOT NULL,
+    ma_ban_sao INT NOT NULL,
+    tt_he_thong NVARCHAR(50) NULL,
+    thuc_te NVARCHAR(50) NULL,
+    chenh_lech NVARCHAR(50) NULL,
+    xu_ly NVARCHAR(255) NULL,
+    CONSTRAINT FK_chi_tiet_kiem_ke_dot FOREIGN KEY (ma_dot_kiem_ke)
+        REFERENCES dbo.dot_kiem_ke(ma_dot_kiem_ke),
+    CONSTRAINT FK_chi_tiet_kiem_ke_ban_sao FOREIGN KEY (ma_ban_sao)
+        REFERENCES dbo.ban_sao_tai_lieu(ma_ban_sao)
+);
+GO
+
 CREATE INDEX IX_tai_khoan_ma_vai_tro ON dbo.tai_khoan(ma_vai_tro);
 CREATE INDEX IX_ban_doc_mssv ON dbo.ban_doc(mssv);
 CREATE INDEX IX_tai_lieu_ma_phan_loai ON dbo.tai_lieu(ma_phan_loai);
@@ -142,4 +189,5 @@ CREATE INDEX IX_phieu_muon_tra_ma_ban_doc ON dbo.phieu_muon_tra(ma_ban_doc);
 CREATE INDEX IX_phieu_muon_tra_ma_ban_sao ON dbo.phieu_muon_tra(ma_ban_sao);
 CREATE INDEX IX_phieu_muon_tra_ngay_muon ON dbo.phieu_muon_tra(ngay_muon);
 CREATE INDEX IX_phieu_muon_tra_trang_thai ON dbo.phieu_muon_tra(trang_thai_phieu);
+CREATE INDEX IX_chi_tiet_kiem_ke_dot ON dbo.chi_tiet_kiem_ke(ma_dot_kiem_ke);
 GO

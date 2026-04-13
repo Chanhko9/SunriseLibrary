@@ -22,10 +22,6 @@ namespace SunriseLibrary.Forms
             this.lblNguonDuLieu = new System.Windows.Forms.Label();
             this.grpDanhSach = new System.Windows.Forms.GroupBox();
             this.dgvSinhVien = new System.Windows.Forms.DataGridView();
-            this.colMSSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colHoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpThongTin = new System.Windows.Forms.GroupBox();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnCapMaThe = new System.Windows.Forms.Button();
@@ -68,7 +64,7 @@ namespace SunriseLibrary.Forms
             // 
             this.btnLoc.Location = new System.Drawing.Point(834, 44);
             this.btnLoc.Name = "btnLoc";
-            this.btnLoc.Size = new System.Drawing.Size(72, 34);
+            this.btnLoc.Size = new System.Drawing.Size(90, 34);
             this.btnLoc.TabIndex = 3;
             this.btnLoc.Text = "Lọc";
             this.btnLoc.UseVisualStyleBackColor = true;
@@ -76,9 +72,9 @@ namespace SunriseLibrary.Forms
             // 
             // btnNapDuLieu
             // 
-            this.btnNapDuLieu.Location = new System.Drawing.Point(716, 44);
+            this.btnNapDuLieu.Location = new System.Drawing.Point(672, 44);
             this.btnNapDuLieu.Name = "btnNapDuLieu";
-            this.btnNapDuLieu.Size = new System.Drawing.Size(108, 34);
+            this.btnNapDuLieu.Size = new System.Drawing.Size(152, 34);
             this.btnNapDuLieu.TabIndex = 2;
             this.btnNapDuLieu.Text = "Nạp dữ liệu";
             this.btnNapDuLieu.UseVisualStyleBackColor = true;
@@ -88,9 +84,9 @@ namespace SunriseLibrary.Forms
             // 
             this.lblTrangThaiDongBo.AutoSize = true;
             this.lblTrangThaiDongBo.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.lblTrangThaiDongBo.Location = new System.Drawing.Point(273, 48);
+            this.lblTrangThaiDongBo.Location = new System.Drawing.Point(338, 48);
             this.lblTrangThaiDongBo.Name = "lblTrangThaiDongBo";
-            this.lblTrangThaiDongBo.Size = new System.Drawing.Size(280, 27);
+            this.lblTrangThaiDongBo.Size = new System.Drawing.Size(285, 27);
             this.lblTrangThaiDongBo.TabIndex = 1;
             this.lblTrangThaiDongBo.Text = "Trạng thái đồng bộ: Đã nhận";
             // 
@@ -100,7 +96,7 @@ namespace SunriseLibrary.Forms
             this.lblNguonDuLieu.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.lblNguonDuLieu.Location = new System.Drawing.Point(20, 48);
             this.lblNguonDuLieu.Name = "lblNguonDuLieu";
-            this.lblNguonDuLieu.Size = new System.Drawing.Size(243, 27);
+            this.lblNguonDuLieu.Size = new System.Drawing.Size(303, 27);
             this.lblNguonDuLieu.TabIndex = 0;
             this.lblNguonDuLieu.Text = "Nguồn dữ liệu: Phòng Đào tạo";
             // 
@@ -119,13 +115,7 @@ namespace SunriseLibrary.Forms
             // 
             this.dgvSinhVien.AllowUserToAddRows = false;
             this.dgvSinhVien.AllowUserToDeleteRows = false;
-            this.dgvSinhVien.AutoGenerateColumns = false;
             this.dgvSinhVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSinhVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colMSSV,
-            this.colHoTen,
-            this.colKhoa,
-            this.colTrangThai});
             this.dgvSinhVien.Location = new System.Drawing.Point(14, 34);
             this.dgvSinhVien.MultiSelect = false;
             this.dgvSinhVien.Name = "dgvSinhVien";
@@ -137,42 +127,6 @@ namespace SunriseLibrary.Forms
             this.dgvSinhVien.Size = new System.Drawing.Size(442, 334);
             this.dgvSinhVien.TabIndex = 0;
             this.dgvSinhVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSinhVien_CellClick);
-            // 
-            // colMSSV
-            // 
-            this.colMSSV.DataPropertyName = "MSSV";
-            this.colMSSV.HeaderText = "MSSV";
-            this.colMSSV.MinimumWidth = 8;
-            this.colMSSV.Name = "colMSSV";
-            this.colMSSV.ReadOnly = true;
-            this.colMSSV.Width = 88;
-            // 
-            // colHoTen
-            // 
-            this.colHoTen.DataPropertyName = "HoTen";
-            this.colHoTen.HeaderText = "Họ tên";
-            this.colHoTen.MinimumWidth = 8;
-            this.colHoTen.Name = "colHoTen";
-            this.colHoTen.ReadOnly = true;
-            this.colHoTen.Width = 122;
-            // 
-            // colKhoa
-            // 
-            this.colKhoa.DataPropertyName = "Khoa";
-            this.colKhoa.HeaderText = "Khoa";
-            this.colKhoa.MinimumWidth = 8;
-            this.colKhoa.Name = "colKhoa";
-            this.colKhoa.ReadOnly = true;
-            this.colKhoa.Width = 125;
-            // 
-            // colTrangThai
-            // 
-            this.colTrangThai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colTrangThai.DataPropertyName = "TrangThai";
-            this.colTrangThai.HeaderText = "Trạng thái";
-            this.colTrangThai.MinimumWidth = 8;
-            this.colTrangThai.Name = "colTrangThai";
-            this.colTrangThai.ReadOnly = true;
             // 
             // grpThongTin
             // 
@@ -213,9 +167,9 @@ namespace SunriseLibrary.Forms
             // 
             // btnCapMaThe
             // 
-            this.btnCapMaThe.Location = new System.Drawing.Point(189, 323);
+            this.btnCapMaThe.Location = new System.Drawing.Point(174, 323);
             this.btnCapMaThe.Name = "btnCapMaThe";
-            this.btnCapMaThe.Size = new System.Drawing.Size(110, 36);
+            this.btnCapMaThe.Size = new System.Drawing.Size(138, 36);
             this.btnCapMaThe.TabIndex = 15;
             this.btnCapMaThe.Text = "Cấp mã thẻ";
             this.btnCapMaThe.UseVisualStyleBackColor = true;
@@ -223,9 +177,9 @@ namespace SunriseLibrary.Forms
             // 
             // btnTaoTaiKhoan
             // 
-            this.btnTaoTaiKhoan.Location = new System.Drawing.Point(46, 323);
+            this.btnTaoTaiKhoan.Location = new System.Drawing.Point(7, 323);
             this.btnTaoTaiKhoan.Name = "btnTaoTaiKhoan";
-            this.btnTaoTaiKhoan.Size = new System.Drawing.Size(122, 36);
+            this.btnTaoTaiKhoan.Size = new System.Drawing.Size(161, 36);
             this.btnTaoTaiKhoan.TabIndex = 14;
             this.btnTaoTaiKhoan.Text = "Tạo tài khoản";
             this.btnTaoTaiKhoan.UseVisualStyleBackColor = true;
@@ -235,7 +189,7 @@ namespace SunriseLibrary.Forms
             // 
             this.dtpNgayKichHoat.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.dtpNgayKichHoat.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgayKichHoat.Location = new System.Drawing.Point(166, 250);
+            this.dtpNgayKichHoat.Location = new System.Drawing.Point(189, 250);
             this.dtpNgayKichHoat.Name = "dtpNgayKichHoat";
             this.dtpNgayKichHoat.Size = new System.Drawing.Size(231, 35);
             this.dtpNgayKichHoat.TabIndex = 13;
@@ -249,7 +203,7 @@ namespace SunriseLibrary.Forms
             "SinhVien",
             "GiangVien",
             "NoiBo"});
-            this.cboLoaiThe.Location = new System.Drawing.Point(166, 209);
+            this.cboLoaiThe.Location = new System.Drawing.Point(189, 209);
             this.cboLoaiThe.Name = "cboLoaiThe";
             this.cboLoaiThe.Size = new System.Drawing.Size(231, 35);
             this.cboLoaiThe.TabIndex = 12;
@@ -259,7 +213,7 @@ namespace SunriseLibrary.Forms
             this.dtpNgaySinh.Enabled = false;
             this.dtpNgaySinh.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgaySinh.Location = new System.Drawing.Point(166, 92);
+            this.dtpNgaySinh.Location = new System.Drawing.Point(189, 92);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(231, 35);
             this.dtpNgaySinh.TabIndex = 11;
@@ -267,7 +221,7 @@ namespace SunriseLibrary.Forms
             // txtSoDienThoai
             // 
             this.txtSoDienThoai.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.txtSoDienThoai.Location = new System.Drawing.Point(166, 168);
+            this.txtSoDienThoai.Location = new System.Drawing.Point(189, 168);
             this.txtSoDienThoai.Name = "txtSoDienThoai";
             this.txtSoDienThoai.ReadOnly = true;
             this.txtSoDienThoai.Size = new System.Drawing.Size(231, 35);
@@ -276,7 +230,7 @@ namespace SunriseLibrary.Forms
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.txtEmail.Location = new System.Drawing.Point(166, 133);
+            this.txtEmail.Location = new System.Drawing.Point(189, 133);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ReadOnly = true;
             this.txtEmail.Size = new System.Drawing.Size(231, 35);
@@ -285,7 +239,7 @@ namespace SunriseLibrary.Forms
             // txtHoTen
             // 
             this.txtHoTen.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.txtHoTen.Location = new System.Drawing.Point(166, 57);
+            this.txtHoTen.Location = new System.Drawing.Point(189, 57);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.ReadOnly = true;
             this.txtHoTen.Size = new System.Drawing.Size(231, 35);
@@ -294,7 +248,7 @@ namespace SunriseLibrary.Forms
             // txtMSSV
             // 
             this.txtMSSV.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.txtMSSV.Location = new System.Drawing.Point(166, 22);
+            this.txtMSSV.Location = new System.Drawing.Point(189, 22);
             this.txtMSSV.Name = "txtMSSV";
             this.txtMSSV.ReadOnly = true;
             this.txtMSSV.Size = new System.Drawing.Size(231, 35);
@@ -306,7 +260,7 @@ namespace SunriseLibrary.Forms
             this.lblNgayKichHoat.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.lblNgayKichHoat.Location = new System.Drawing.Point(23, 254);
             this.lblNgayKichHoat.Name = "lblNgayKichHoat";
-            this.lblNgayKichHoat.Size = new System.Drawing.Size(142, 27);
+            this.lblNgayKichHoat.Size = new System.Drawing.Size(164, 27);
             this.lblNgayKichHoat.TabIndex = 6;
             this.lblNgayKichHoat.Text = "Ngày kích hoạt:";
             // 
@@ -316,7 +270,7 @@ namespace SunriseLibrary.Forms
             this.lblLoaiThe.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.lblLoaiThe.Location = new System.Drawing.Point(23, 212);
             this.lblLoaiThe.Name = "lblLoaiThe";
-            this.lblLoaiThe.Size = new System.Drawing.Size(88, 27);
+            this.lblLoaiThe.Size = new System.Drawing.Size(98, 27);
             this.lblLoaiThe.TabIndex = 5;
             this.lblLoaiThe.Text = "Loại thẻ:";
             // 
@@ -326,7 +280,7 @@ namespace SunriseLibrary.Forms
             this.lblSoDienThoai.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.lblSoDienThoai.Location = new System.Drawing.Point(23, 171);
             this.lblSoDienThoai.Name = "lblSoDienThoai";
-            this.lblSoDienThoai.Size = new System.Drawing.Size(128, 27);
+            this.lblSoDienThoai.Size = new System.Drawing.Size(143, 27);
             this.lblSoDienThoai.TabIndex = 4;
             this.lblSoDienThoai.Text = "Số điện thoại:";
             // 
@@ -336,7 +290,7 @@ namespace SunriseLibrary.Forms
             this.lblEmail.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.lblEmail.Location = new System.Drawing.Point(23, 136);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(66, 27);
+            this.lblEmail.Size = new System.Drawing.Size(74, 27);
             this.lblEmail.TabIndex = 3;
             this.lblEmail.Text = "Email:";
             // 
@@ -346,7 +300,7 @@ namespace SunriseLibrary.Forms
             this.lblNgaySinh.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.lblNgaySinh.Location = new System.Drawing.Point(23, 96);
             this.lblNgaySinh.Name = "lblNgaySinh";
-            this.lblNgaySinh.Size = new System.Drawing.Size(105, 27);
+            this.lblNgaySinh.Size = new System.Drawing.Size(114, 27);
             this.lblNgaySinh.TabIndex = 2;
             this.lblNgaySinh.Text = "Ngày sinh:";
             // 
@@ -356,7 +310,7 @@ namespace SunriseLibrary.Forms
             this.lblHoTen.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.lblHoTen.Location = new System.Drawing.Point(23, 60);
             this.lblHoTen.Name = "lblHoTen";
-            this.lblHoTen.Size = new System.Drawing.Size(80, 27);
+            this.lblHoTen.Size = new System.Drawing.Size(83, 27);
             this.lblHoTen.TabIndex = 1;
             this.lblHoTen.Text = "Họ tên:";
             // 
@@ -364,9 +318,9 @@ namespace SunriseLibrary.Forms
             // 
             this.lblMSSV.AutoSize = true;
             this.lblMSSV.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.lblMSSV.Location = new System.Drawing.Point(23, 25);
+            this.lblMSSV.Location = new System.Drawing.Point(23, 30);
             this.lblMSSV.Name = "lblMSSV";
-            this.lblMSSV.Size = new System.Drawing.Size(74, 27);
+            this.lblMSSV.Size = new System.Drawing.Size(77, 27);
             this.lblMSSV.TabIndex = 0;
             this.lblMSSV.Text = "MSSV:";
             // 
