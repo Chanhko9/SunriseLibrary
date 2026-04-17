@@ -44,12 +44,10 @@ Các bảng này phục vụ cho 3 khối nghiệp vụ chính:
 
 ## Chức năng chính
 
-### Đã có giao diện và khung chức năng
+
 - Đăng nhập hệ thống
 - Trang chủ hệ thống
 - Tra cứu tài liệu
-
-### Đang tiếp tục phát triển
 - Mượn / trả sách
 - Cấp thẻ thư viện
 - Hồ sơ bạn đọc
